@@ -3,7 +3,7 @@ import { twMerge } from "tailwind-merge";
 
 interface GridContainerProps {
   children: ReactNode;
-  className: string;
+  className?: string;
 }
 
 export function GridContainer({ children, className }: GridContainerProps) {
