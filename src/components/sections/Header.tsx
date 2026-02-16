@@ -1,16 +1,16 @@
 "use client";
 
 import { Cloud, X, Menu } from "lucide-react";
-import { GridContainer } from "../GridContainer";
-import { links } from "../../../constants/index.js";
+import { Container } from "../Container";
+import { links } from "../../constants/index.js";
 import { useState } from "react";
-import { Button } from "../UI/Button";
+import { Button } from "../ui/Button";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <header className="md:py-15 py-5">
-      <GridContainer className="flex justify-between items-center">
+      <Container className="flex justify-between items-center">
         <a
           href="#"
           className="flex items-center gap-1 text-foreground hover:text-muted transition-all ease duration-200 font-semibold"
@@ -34,7 +34,7 @@ export function Header() {
               <a href="#" target="_blank">
                 <span
                   className={`md:text-2xl text-xl ${
-                    link.isLight && "font-light"
+                    link.isLightWeight && "font-light"
                   }`}
                 >
                   {link.name}
@@ -64,7 +64,7 @@ export function Header() {
             />
           )}
         </button>
-      </GridContainer>
+      </Container>
     </header>
   );
 }

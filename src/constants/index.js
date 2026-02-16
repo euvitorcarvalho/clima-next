@@ -1,14 +1,14 @@
 export const links = [
     {
         name: 'Home',
-        isLight: false,
+        isLightWeight: false,
     },
     {
         name: 'About',
-        isLight: true,
+        isLightWeight: true,
     },
     {
         name: 'Contact Us',
-        isLight: true,
+        isLightWeight: true,
     }
 ];

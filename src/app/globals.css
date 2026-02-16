@@ -28,3 +28,18 @@ body {
   color: var(--foreground);
   font-family: "Poppins", sans-serif;
 }
+
+@layer utilities {
+  .bg-hero-pattern {
+    background-image: url('/assets/bg-mobile.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: 768px) {
+    .bg-hero-pattern {
+      background-image: url('/assets/bg.svg');
+    }
+  }
+}
