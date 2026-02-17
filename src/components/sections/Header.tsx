@@ -2,7 +2,7 @@
 
 import { Cloud, X, Menu } from "lucide-react";
 import { Container } from "../Container";
-import { links } from "../../constants/index.js";
+import { links } from "../../constants/index";
 import { useState } from "react";
 import { Button } from "../ui/Button";
 

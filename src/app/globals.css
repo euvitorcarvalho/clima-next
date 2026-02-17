@@ -5,6 +5,10 @@
   --surface: #ffffff;
   --foreground: #1b282e;
   --muted: #5f6f78;
+  --intro-start: #38BDF8;
+  --intro-end: #78CFFF;
+  --button-start: #1b282e; 
+  --button-end: #37505D;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,20 +17,17 @@
     --surface: #24353e;
     --foreground: #ffffff;
     --muted: #c2c2c2;
+    --intro-start: #CAECFF;
+    --intro-end: #78CFFF;
+    --button-start: #3a5e72; 
+    --button-end: #5c93b1;
   }
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-surface: var(--surface);
-  --color-muted: var(--muted);
-}
-
-html, body {
+html,
+body {
   height: 100%;
 }
-
 
 body {
   background-color: var(--background);
