@@ -5,10 +5,10 @@
   --surface: #ffffff;
   --foreground: #1b282e;
   --muted: #5f6f78;
-  --intro-start: #38BDF8;
-  --intro-end: #78CFFF;
-  --button-start: #1b282e; 
-  --button-end: #37505D;
+  --intro-start: #38bdf8;
+  --intro-end: #78cfff;
+  --button-start: #1b282e;
+  --button-end: #37505d;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,20 +17,14 @@
     --surface: #24353e;
     --foreground: #ffffff;
     --muted: #c2c2c2;
-    --intro-start: #CAECFF;
-    --intro-end: #78CFFF;
-    --button-start: #3a5e72; 
+    --intro-start: #caecff;
+    --intro-end: #78cfff;
+    --button-start: #3a5e72;
     --button-end: #5c93b1;
   }
-}
-
-html,
-body {
-  height: 100%;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: "Poppins", sans-serif;
 }
