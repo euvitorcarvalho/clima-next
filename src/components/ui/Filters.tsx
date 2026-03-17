@@ -1,13 +1,24 @@
+"use client";
+
 import Select from "./Select";
 import { conditionFilter, temperatureFilter, windFilter } from "@/constants";
+import { ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 export default function Filters() {
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
   return (
-    <div className="flex items-center w-full sm:h-26 bg-(--surface) rounded-xl">
-      Filters
-      <Select condition={conditionFilter} />
-      <Select condition={temperatureFilter} />
-      <Select condition={windFilter} />
+    <div className="flex flex-col py-3.5 px-7.5 sm:flex-row max-w-[80%] items-center justify-center w-full sm:gap-9.5 gap-4 sm:h-26 bg-(--surface) rounded-xl">
+      <p className="sm:text-[27px] text-xl flex flex-row justify-center items-center gap-1 text-foreground">
+        Filters
+        <ChevronDown
+          className="sm:hidden size-5"
+          onClick={() => setIsFilterOpen(!isFilterOpen)}
+        />
+      </p>
+      <Select condition={conditionFilter} isFilterOpen={isFilterOpen} />
+      <Select condition={temperatureFilter} isFilterOpen={isFilterOpen} />
+      <Select condition={windFilter} isFilterOpen={isFilterOpen} />
     </div>
   );
 }

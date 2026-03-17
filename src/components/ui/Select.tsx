@@ -1,12 +1,13 @@
 interface SelectOption {
   condition: { name: string; value: string }[];
+  isFilterOpen?: boolean;
 }
 
-export default function Select({ condition }: SelectOption) {
+export default function Select({ condition, isFilterOpen }: SelectOption) {
   return (
-    <select>
+    <select className={`${isFilterOpen ? "" : "sm:flex hidden"} bg-[#1F2D34] border border-(--muted) rounded-lg w-full text-center py-2 text-foreground`}>
       {condition.map((option) => (
-        <option key={option.value} value={option.value}>
+        <option className="" key={option.value} value={option.value}>
           {option.name}
         </option>
       ))}
