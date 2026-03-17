@@ -7,10 +7,10 @@ export default function Home() {
   return (
     <div>
       {/* fazer background no menu da header versão mobile */}
-      {/* tentar fazer a responsividade da barra de filtro e search por conta própria */}
+      {/* tentar fazer a responsividade da barra de filtro e search*/}
       <Intro />
       <Main>
-        <div className="flex justify-between sm:flex-nowrap flex-wrap items-center sm:gap-45 gap-5 py-18.5">
+        <div className="flex sm:justify-between justify-center sm:flex-nowrap flex-wrap items-center sm:gap-45 gap-5 py-18.5">
           <Input></Input>
           <Filters></Filters>
         </div>
