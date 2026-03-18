@@ -22,7 +22,7 @@ export function Header() {
         <ul
           className={`flex flex-col md:flex-row md:static md:gap-13 gap-3 absolute ${
             isMenuOpen
-              ? "right-5 bg-surface p-6 rounded-3xl border border-[rgba(255,255,255,0.28)]"
+              ? "right-5 bg-surface p-6 rounded-3xl border bg-(--surface) border-[rgba(255,255,255,0.28)]"
               : "-right-full"
           } top-20 transition-all duration-300`}
         >
