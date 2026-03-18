@@ -15,8 +15,8 @@ export function Header() {
           href="#"
           className="flex items-center gap-1 text-foreground hover:text-muted transition-all ease duration-200 font-semibold"
         >
-          <Cloud size={44} />
-          <span className="text-[40px]">Clima</span>
+          <Cloud className="sm:size-10 size-7" />
+          <span className="sm:text-4xl text-2xl">Clima</span>
         </a>
 
         <ul
@@ -54,12 +54,10 @@ export function Header() {
         >
           {isMenuOpen ? (
             <X
-              size={35}
               className="text-foreground hover:text-muted transition-all ease duration-200"
             />
           ) : (
             <Menu
-              size={35}
               className="text-foreground hover:text-muted transition-all ease duration-200"
             />
           )}

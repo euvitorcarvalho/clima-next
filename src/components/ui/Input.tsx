@@ -3,7 +3,7 @@ export default function Input() {
         <input
             type="text"
             placeholder="Search Here"
-            className="placeholder:text-(--foreground) placeholder:font-extralight text-2xl border-none bg-(--surface) w-full md:max-w-89 h-21 px-7.5 rounded-xl"
+            className="placeholder:text-(--foreground) placeholder:font-extralight sm:text-2xl text-xl border-none bg-(--surface) w-full md:max-w-89 sm:h-21 h-12 sm:px-7.5 px-3 rounded-xl"
         />
     )
 }
