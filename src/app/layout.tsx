@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${poppins.variable}`}>
+    <html lang="pt-BR" className={`${poppins.className}`}>
       <body
         className={`h-screen w-screen md:bg-[url('/assets/bg.svg')] bg-[url('/assets/bg-mobile.png')] bg-cover bg-center`}
       >
