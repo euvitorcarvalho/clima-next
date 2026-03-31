@@ -33,7 +33,7 @@ export function Header() {
             >
               <a href="#" target="_blank">
                 <span
-                  className={`md:text-2xl text-xl ${
+                  className={`md:text-2xl text-2xl ${
                     link.isLightWeight && "font-light"
                   }`}
                 >
