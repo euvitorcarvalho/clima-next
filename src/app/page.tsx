@@ -10,7 +10,7 @@ export default function Home() {
       {/* tentar fazer a responsividade da barra de filtro e search*/}
       <Intro />
       <Main>
-        <div className="flex sm:justify-between justify-center sm:flex-nowrap flex-wrap items-center sm:gap-45 gap-5 sm:py-18.5 py-5">
+        <div className="flex sm:flex-row flex-col flex-wrap lg:justify-between justify-center items-center gap-5 lg:py-18.75 py-8">
           <Input></Input>
           <Filters></Filters>
         </div>

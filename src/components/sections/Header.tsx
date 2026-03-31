@@ -16,11 +16,11 @@ export function Header() {
           className="flex items-center gap-1 text-foreground hover:text-muted transition-all ease duration-200 font-semibold"
         >
           <Cloud className="sm:size-10 size-7" />
-          <span className="sm:text-4xl text-2xl">Clima</span>
+          <span className="text-4xl">Clima</span>
         </a>
 
         <ul
-          className={`flex flex-col md:flex-row md:static md:gap-13 gap-3 absolute ${
+          className={`flex flex-col md:flex-row md:static md:gap-13 gap-6 absolute ${
             isMenuOpen
               ? "right-5 bg-surface p-6 rounded-3xl border bg-(--surface) border-[rgba(255,255,255,0.28)]"
               : "-right-full"
@@ -54,11 +54,12 @@ export function Header() {
         >
           {isMenuOpen ? (
             <X
-              className="text-foreground hover:text-muted transition-all ease duration-200"
+              className="size-10 text-foreground hover:text-muted transition-all ease duration-200"
             />
           ) : (
             <Menu
-              className="text-foreground hover:text-muted transition-all ease duration-200"
+              strokeWidth={2.5}
+              className="size-10 text-foreground hover:text-muted transition-all ease duration-200"
             />
           )}
         </button>
