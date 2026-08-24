@@ -7,14 +7,17 @@ import Filters from "@/components/ui/Filters";
 import { useState } from "react";
 
 export default function Home() {
-  const [inputValue, setInputValue] = useState("");
+  const [searchInputValue, setSearchInputValue] = useState("");
 
   return (
     <div>
       <Intro />
       <Main>
         <div className="flex sm:flex-row flex-col flex-wrap lg:justify-between justify-center items-center gap-5 lg:py-18.75 py-8">
-          <Input value={inputValue} valueChanged={setInputValue}></Input>
+          <Input
+            value={searchInputValue}
+            valueChanged={setSearchInputValue}
+          ></Input>
           <Filters></Filters>
         </div>
       </Main>
