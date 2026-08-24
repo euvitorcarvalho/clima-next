@@ -8,7 +8,6 @@ import { useState } from "react";
 
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
-  console.log(inputValue);
 
   return (
     <div>
