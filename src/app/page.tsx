@@ -4,10 +4,32 @@ import Main from "@/components/layout/Main";
 import { Intro } from "../components/layout/Intro";
 import Input from "@/components/ui/Input";
 import Filters from "@/components/ui/Filters";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useDebounce } from "@/hooks/useDebounce";
 
 export default function Home() {
   const [searchInputValue, setSearchInputValue] = useState("");
+
+  const debouncedSearchInputValue = useDebounce(searchInputValue);
+
+  useEffect(() => {
+    async function fetchData(location: string) {
+      if (!location || location.length < 3) return;
+
+      try {
+        const response = await fetch(`/api/geocoding?location=${location}`);
+        const data = await response.json();
+        console.log(data);
+      } catch (err) {
+        if (err instanceof Error) {
+          console.log(err.message);
+        } else {
+          console.log("Erro desconhecido.");
+        }
+      }
+    }
+    fetchData(debouncedSearchInputValue);
+  }, [debouncedSearchInputValue]);
 
   return (
     <div>
