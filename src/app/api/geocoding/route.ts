@@ -2,9 +2,9 @@ import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const location = searchParams.get("location");
+  const inputValue = searchParams.get("inputValue");
 
-  if (!location) {
+  if (!inputValue) {
     return NextResponse.json(
       { error: "Informe uma localização" },
       { status: 400 },
@@ -12,7 +12,7 @@ export async function GET(request: Request) {
   }
 
   const apiKey = process.env.WEATHER_API_KEY;
-  const geocodingURL = `http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=${6}&appid=${apiKey}`;
+  const geocodingURL = `http://api.openweathermap.org/geo/1.0/direct?q=${inputValue}&limit=${6}&appid=${apiKey}`;
 
   try {
     const response = await fetch(geocodingURL);
@@ -20,7 +20,7 @@ export async function GET(request: Request) {
 
     if (data.length === 0) {
       return NextResponse.json(
-        { error: `Nenhuma localidade encontrada para: ${location}` },
+        { error: `Nenhuma localidade encontrada para: ${inputValue}` },
         { status: 400 },
       );
     }
